@@ -5,73 +5,105 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://mmu-healthcare-demo.vercel.app)
 
-A modern, standalone Healthcare Management System built with **Angular 19**. This platform streamlines hospital operations from patient registration to pharmaceutical dispensing, featuring a high-performance zoneless architecture and a sleek, responsive UI.
+MMU Healthcare is a comprehensive, enterprise-grade **Standalone Healthcare Management System** built on the cutting edge of **Angular 19**. Designed for high-traffic clinical environments, it offers a seamless, zoneless reactive experience for healthcare professionals.
 
 🚀 **[View Live Demo](https://mmu-healthcare-demo.vercel.app)**
 
 ---
 
-## ✨ Key Features
+## 📺 Interactive Demo
 
-- **🛡️ Multi-Role Dashboard**: Tailored experiences for Admin, Doctors, Nurses, and Pharmacists.
-- **📋 Patient Lifecycle**: End-to-end management from registration to vitals recording and consultation.
-- **⚡ Zoneless Performance**: Leveraging Angular 19's experimental zoneless change detection for maximum efficiency.
-- **💉 Clinical Modules**:
-  - **Nurse Station**: Real-time vitals tracking and queue management.
-  - **Doctor Consultation**: Chief complaint tracking, diagnosis, and e-prescribing.
-  - **Pharmacy & Lab**: Streamlined dispensing and lab order tracking.
-- **🔄 Offline Ready**: Built-in interceptors for offline synchronization support.
-- **🧩 Mock API**: Fully functional "in-memory" backend for zero-config demonstration.
+Watch the platform in action, from authentication to patient management:
 
-## 🔑 Demo Credentials
+![Platform Walkthrough](./docs/assets/demo.webp)
 
-To explore the full capabilities of the platform, use the following credentials:
+---
 
-| Role | Username | Password |
+## ✨ Enterprise Features
+
+### 🔐 Secure Multi-Role Access
+A robust authentication layer that handles role-based access control (RBAC). The platform dynamically adjusts its UI and permissions based on the logged-in professional's role (Admin, Doctor, Nurse, etc.).
+
+| Role | Access Level | Key Responsibilities |
 | :--- | :--- | :--- |
-| **System Administrator** | `admin` | `admin` |
+| **Admin** | Superuser | System configuration, user management, and global audits. |
+| **Doctor** | Clinical | Consultations, e-prescriptions, and lab order management. |
+| **Nurse** | Operational | Patient vitals, queue management, and initial screenings. |
+| **Pharmacist** | Support | Medication dispensing and inventory tracking. |
+
+### 📋 Patient Lifecycle Management
+From the moment a patient arrives, MMU Healthcare tracks every touchpoint:
+- **Registration**: Quick-entry forms with validation.
+- **Nurse Station**: Integrated vitals recording (BP, Pulse, SpO2, Temperature).
+- **Doctor's Desk**: Comprehensive clinical notes and diagnosis tracking.
+
+![Dashboard Preview](./docs/assets/dashboard.png)
+
+### ⚡ Technical Excellence (Angular 19)
+- **Zoneless Reactivity**: Utilizing `provideExperimentalZonelessChangeDetection` to eliminate Zone.js overhead, resulting in faster rendering and lower memory footprint.
+- **Signal-Driven Architecture**: State management is handled entirely by Angular Signals, providing fine-grained reactivity and eliminating RxJS complexity for simple state.
+- **Modular Features**: Each clinical area (Pharmacy, Lab, Registration) is a self-contained feature module for easy maintainability.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Angular 19 (Standalone Components)
-- **State Management**: Angular Signals
+- **Core**: Angular 19 (Standalone Architecture)
+- **State**: Angular Signals & RxJS
 - **Styling**: Tailwind CSS 4.0
+- **Visualization**: Chart.js / ng2-charts
 - **Icons**: Lucide Angular
-- **Charts**: Chart.js / ng2-charts
-- **Deployment**: Vercel
+- **Mocking**: Custom HTTP Interceptors for a "Database-less" full-stack demo.
+
+---
+
+## 📂 Project Structure
+
+```text
+mmu-ui/
+├── docs/               # Technical documentation & Assets
+├── src/
+│   ├── app/
+│   │   ├── core/       # Global services, guards, and interceptors
+│   │   ├── features/   # Domain-specific modules (Admin, Registration, etc.)
+│   │   ├── layouts/    # App shell and shared layouts
+│   │   └── shared/     # Reusable UI components (Toasts, Buttons, etc.)
+│   ├── environments/   # Configuration for Dev/Prod
+│   └── styles/         # Global Tailwind & CSS definitions
+└── angular.json        # Workspace configuration
+```
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v20 or higher)
-- Angular CLI (`npm install -g @angular/cli`)
+- Node.js (v20+)
+- Angular CLI
 
-### Installation
+### Quick Setup
 
-1. **Clone the repository**
+1. **Clone & Install**
    ```bash
    git clone https://github.com/SurbhiAgarwal1/MMU.git
-   cd MMU
-   ```
-
-2. **Install dependencies**
-   ```bash
    npm install
    ```
 
-3. **Start the development server**
+2. **Run Locally**
    ```bash
    npm start
    ```
-   Navigate to `http://localhost:4200/`.
+   Access the app at `http://localhost:4200/`.
 
-## 📂 Project Structure
-
-For a detailed look at the technical architecture, see [ARCHITECTURE.md](./docs/ARCHITECTURE.md).
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+3. **Explore the Demo**
+   Login with:
+   - **Username**: `admin`
+   - **Password**: `admin`
 
 ---
-*Developed with ❤️ for the healthcare community.*
+
+## 📄 License
+This project is licensed under the MIT License.
+
+---
+*Developed with a focus on modern web standards and healthcare efficiency.*
