@@ -44,10 +44,12 @@ export const mockInterceptor: HttpInterceptorFn = (req, next) => {
       status: 200,
       body: {
         data: [
-          { id: 'p-1', uhid: 'MMU-001', firstName: 'John', lastName: 'Doe', gender: 'male', phone: '1234567890', createdAt: new Date().toISOString() },
-          { id: 'p-2', uhid: 'MMU-002', firstName: 'Jane', lastName: 'Smith', gender: 'female', phone: '0987654321', createdAt: new Date().toISOString() }
+          { id: 'p-1', uhid: 'MMU-2401', firstName: 'Aarav', lastName: 'Sharma', gender: 'male', phone: '9876543210', createdAt: '2026-05-01T10:00:00Z' },
+          { id: 'p-2', uhid: 'MMU-2402', firstName: 'Priya', lastName: 'Patel', gender: 'female', phone: '8765432109', createdAt: '2026-05-02T11:30:00Z' },
+          { id: 'p-3', uhid: 'MMU-2403', firstName: 'Rahul', lastName: 'Verma', gender: 'male', phone: '7654321098', createdAt: '2026-05-03T09:15:00Z' },
+          { id: 'p-4', uhid: 'MMU-2404', firstName: 'Anjali', lastName: 'Gupta', gender: 'female', phone: '6543210987', createdAt: '2026-05-04T14:45:00Z' }
         ],
-        total: 2
+        total: 4
       }
     })).pipe(delay(500));
   }
