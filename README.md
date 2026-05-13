@@ -19,6 +19,19 @@ Watch the platform in action, from authentication to patient management:
 
 ---
 
+## 🏥 Clinical Workflow
+
+The platform is designed to mirror the actual clinical path of a patient:
+
+1.  **Patient Inflow**: Receptionists register patients and assign them to the Nurse Station queue.
+2.  **Initial Screening**: Nurses pull patients from the queue to record vital signs (BP, SpO2, etc.).
+3.  **Doctor Consultation**: Doctors access the patient's record, review vitals, and provide diagnosis and e-prescriptions.
+4.  **Support Services**: Pharmacists and Lab Technicians receive real-time updates for dispensing and testing.
+
+![Workflow Demo](./docs/assets/app_run.webp)
+
+---
+
 ## ✨ Enterprise Features
 
 ### 🔐 Secure Multi-Role Access
@@ -39,10 +52,14 @@ From the moment a patient arrives, MMU Healthcare tracks every touchpoint:
 
 ![Dashboard Preview](./docs/assets/dashboard.png)
 
-### ⚡ Technical Excellence (Angular 19)
+### ⚡ Technical Innovation (Angular 19)
 - **Zoneless Reactivity**: Utilizing `provideExperimentalZonelessChangeDetection` to eliminate Zone.js overhead, resulting in faster rendering and lower memory footprint.
 - **Signal-Driven Architecture**: State management is handled entirely by Angular Signals, providing fine-grained reactivity and eliminating RxJS complexity for simple state.
-- **Modular Features**: Each clinical area (Pharmacy, Lab, Registration) is a self-contained feature module for easy maintainability.
+- **Standalone Components**: 100% standalone architecture for faster builds and easier testing.
+- **Tailwind CSS 4.0**: Modern styling with zero runtime overhead and CSS-variable based configuration.
+
+### 🧩 Smart Mock API
+The platform includes a built-in **Intercepting Mock Engine**. This allows for a full end-to-end demonstration (Login, Registration, Consultations) without any backend installation, making it perfect for rapid prototyping and stakeholder reviews.
 
 ---
 
